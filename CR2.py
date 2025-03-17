@@ -52,3 +52,15 @@ def polyfit_coeffs(x: np.ndarray, y: np.ndarray) -> np.array:
     a = np.array([float(i) for i in sp.solve(equations, coeffs).values()])
 
     return a
+
+x = np.array([1.0, 2.0, 3.0, 4.0])
+y = x ** 3
+
+a = polyfit_coeffs(x, y)
+
+print(f"{len(a.shape):d}")
+print(f"{len(a):d}")
+print(f"{a[0]:.4f}")
+print(f"{abs(a[1]):.4f}")
+print(f"{abs(a[2]):.4f}")
+print(f"{a[3]:.4f}")
